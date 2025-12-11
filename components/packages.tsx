@@ -76,7 +76,7 @@ function renderItems(
 }
 const Packages = () => {
   return (
-    <div className="container mt-12">
+    <div className="container mt-12 max-w-350 mx-auto">
       <h2
         id="pakete"
         className="text-center font-bold text-2xl md:text-5xl text-pink-500 pt-20  uppercase border-b pb-2  "
@@ -143,14 +143,14 @@ const Packages = () => {
         </div>
       </div>
       <div className="grid md:grid-cols-3 gap-y-8 gap-x-10 mt-20">
-        <Card className="flex flex-col h-full">
+        <Card className="flex flex-col h-full border-pink-500">
           <CardHeader className="relative">
             <CardTitle className=" text-3xl">Early Bird</CardTitle>
             <p className="absolute -top-3 -right-4 rotate-12 text-2xl bg-pink-500 m-2 p-1 rounded-lg font-extrabold text-center text-white">
               10% Rabatt
             </p>
             <CardDescription>
-              bei Buchung zwischen 01.02. - 31.03.2025
+              bei Buchung zwischen 01.02. - 31.03.2026
             </CardDescription>
           </CardHeader>
           <CardContent className="grow">
@@ -171,7 +171,7 @@ const Packages = () => {
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-pink-500/70 text-white p-5 gap-4">
             <div className="flex">
-              <p className="text-5xl font-semibold">913,70*</p>
+              <p className="text-5xl font-semibold">807,60 €*</p>
               <EuroIcon size={50} color="white" />
             </div>
             <div className="text-center">
@@ -186,7 +186,7 @@ const Packages = () => {
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung 1039,70 €</p>
+              <p>Doppelzimmer zur Einzelnutzung 915,60 €</p>
             </div>
           </div>
         </Card>
@@ -198,7 +198,7 @@ const Packages = () => {
               20% Rabatt
             </p>
             <CardDescription className="text-white">
-              bei Buchung bis 31.01.2025
+              bei Buchung bis 31.01.2026
             </CardDescription>
           </CardHeader>
           <CardContent className="grow">
@@ -219,7 +219,7 @@ const Packages = () => {
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-white text-pink-500 p-5 gap-4">
             <div className="flex">
-              <p className="text-5xl font-semibold">851,40*</p>
+              <p className="text-5xl font-semibold">751,20 €*</p>
               <EuroIcon size={50} color="white" />
             </div>
             <div className="text-center">
@@ -239,16 +239,16 @@ const Packages = () => {
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung 963,40 €</p>
+              <p>Doppelzimmer zur Einzelnutzung 847,20 €</p>
             </div>
           </div>
         </Card>
 
-        <Card className="flex flex-col h-full">
+        <Card className="flex flex-col h-full border-pink-500">
           <CardHeader className="relative">
             <CardTitle className=" text-3xl">Regular</CardTitle>
 
-            <CardDescription>bei Buchung ab 01.04.2025</CardDescription>
+            <CardDescription>bei Buchung ab 01.04.2026</CardDescription>
           </CardHeader>
           <CardContent className="grow">
             <ul>
@@ -268,7 +268,7 @@ const Packages = () => {
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-pink-500/70 text-white p-5 gap-4">
             <div className="flex">
-              <p className="text-5xl font-semibold">976,00*</p>
+              <p className="text-5xl font-semibold">864,00 €*</p>
               <EuroIcon size={50} color="white" />
             </div>
             <div className="text-center">
@@ -284,7 +284,7 @@ const Packages = () => {
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung 1116,00 €</p>
+              <p>Doppelzimmer zur Einzelnutzung 984,00 €</p>
             </div>
           </div>
         </Card>
@@ -330,28 +330,41 @@ const Packages = () => {
         ))} */}
       </div>
 
-      <h3 className="text-2xl text-pink-500 pt-10 mt-10 pb-10">
-        Preisliste für Verleih, Storage und Kurse
-      </h3>
-      <div className="flex items-center flex-col md:flex-row space-y-4 md:space-y-0">
-        <p>
-          Die Preise für den Verleih von Katmaterial, Storage und Kurse findest
-          du hier:
-        </p>
-        <div>
-          <Link
-            href="/Fact Sheet 7 Bft KiteHouse - winter 2024-25.pdf"
-            passHref
-            target="_blank"
-          >
-            <TbFileTypePdf size={50} className="text-pink-500 ml-3" />
-          </Link>
+      <div className="mt-28 mb-10 max-w-350 mx-auto">
+        <div className="bg-linear-to-r from-pink-50 to-blue-50 rounded-xl p-8 shadow-lg">
+          <h3 className="text-3xl font-bold text-pink-500 text-center mb-6">
+            Preisliste für Verleih, Storage und Kurse
+          </h3>
+
+          <div className="bg-white rounded-lg p-6 mb-6 shadow-sm">
+            <p className="text-center text-lg mb-4">
+              Die Preise für den Verleih von Kitematerial, Storage und Kurse
+              findest du hier:
+            </p>
+
+            <Link
+              href="/Price List KiteHouse for Kite - Spirit - Fun - May 2026.pdf"
+              passHref
+              target="_blank"
+              className="flex items-center justify-center gap-4 bg-pink-500 hover:bg-pink-600 text-white rounded-lg p-4 transition-colors duration-200"
+            >
+              <TbFileTypePdf size={40} />
+              <span className="font-semibold text-lg">
+                Preisliste herunterladen (PDF)
+              </span>
+            </Link>
+          </div>
+
+          <div className="bg-pink-100 rounded-lg p-6 text-center">
+            <p className="text-xl">
+              Auf die gelisteten Preise bekommst du{" "}
+              <span className="font-bold text-3xl text-pink-600">
+                15% Rabatt!
+              </span>
+            </p>
+          </div>
         </div>
       </div>
-      <p className="pt-4">
-        Auf die gelisteten Preise bekommst du{" "}
-        <span className="font-bold text-lg">15% </span>Rabatt!
-      </p>
     </div>
   );
 };

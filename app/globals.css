@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 html {
   scroll-behavior: smooth !important;
@@ -11,6 +9,12 @@ body {
 input,
 textarea {
   font-size: 1rem !important;
+}
+
+@layer components {
+  button {
+    @apply cursor-pointer;
+  }
 }
 
 @layer base {

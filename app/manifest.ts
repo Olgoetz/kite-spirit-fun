@@ -2,10 +2,10 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Kite-Spirit-Fun Camp 2025",
+    name: "Ocean-Spirit-Fun Camp 2025",
     short_name: "Kitecamp",
     description:
-      "Kite-Spirit-Fun Camp 2025 in Soma Bay (Ägypten) mit Michaela Süßbauer",
+      "Ocean-Spirit-Fun Camp 2026 in Soma Bay (Ägypten) mit Michaela Süßbauer und Katja Frank",
     start_url: "/",
     display: "standalone",
     background_color: "#fff",

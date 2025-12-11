@@ -1,5 +1,6 @@
-import Navbar from "@/components/navbar";
 import "./globals.css";
+import Navbar from "@/components/navbar";
+
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Footer } from "@/components/footer";
@@ -47,7 +48,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <Toaster />
+
         <ScrollToTopButton />
         <Toaster />
       </body>

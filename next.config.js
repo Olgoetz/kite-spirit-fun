@@ -6,6 +6,8 @@ const nextConfig = {
       "www.thebreakers-somabay.com",
       "images.alltours.de",
     ],
+
+    qualities: [25, 50, 75, 100],
   },
 };
 
