@@ -56,7 +56,7 @@ const program: ProgramPoint[] = [
 
 const Program = () => {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white p-4">
       <div id="programm" className="container max-w-350 mx-auto py-20">
         <h2 className="text-2xl md:text-5xl uppercase font-bold text-pink-500 mb-10 border-b pb-2 text-center">
           Programm

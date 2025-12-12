@@ -76,7 +76,7 @@ function renderItems(
 }
 const Packages = () => {
   return (
-    <div className="container mt-12 max-w-350 mx-auto">
+    <div className="container mt-10 px-4 max-w-350 mx-auto">
       <h2
         id="pakete"
         className="text-center font-bold text-2xl md:text-5xl text-pink-500 pt-20  uppercase border-b pb-2  "

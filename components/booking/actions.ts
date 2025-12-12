@@ -21,7 +21,7 @@ export const sendBookingInquiry = async (formData: FormData) => {
       from: `M. Suessbauer <${senderEmail}>`,
       to: [process.env.RESEND_TO_EMAIL_BOOKING as string],
       cc: process.env.RESEND_TO_EMAIL_EVENT as string,
-      subject: "Kite Spirit Fun Camp 2026: Neue Buchungsanfrage",
+      subject: "Move-Spirit-Fun 2026 Ocean Edition: Neue Buchungsanfrage",
       react: await BookingEmailTemplate({
         name: input.name,
         email: input.email,

@@ -3,7 +3,7 @@ import katja_yoga from "@/public/katja_yoga.jpeg";
 
 const Aboutme = () => {
   return (
-    <div className="mt-20   bg-black text-white">
+    <div className="mt-20 px-4 bg-black text-white">
       <h2
         id="ueberuns"
         className="py-20 text-center font-bold text-xl md:text-5xl uppercase border-b pb-2 text-pink-500"

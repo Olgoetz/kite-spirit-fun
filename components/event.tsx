@@ -7,7 +7,7 @@ import michi_und_katja from "@/public/michi_und_katja.jpeg";
 const Event = () => {
   return (
     <div
-      className="container max-w-350 mx-auto "
+      className="container px-4 max-w-350 mx-auto "
       //   style={{ ...springs }}
     >
       <h1

@@ -20,7 +20,8 @@ export const sendContactMessage = async (formData: FormData) => {
     await resend.emails.send({
       from: `M. Suessbauer <${senderEmail}>`,
       to: process.env.RESEND_TO_EMAIL_EVENT as string,
-      subject: "Kite Spirit Fun Camp 2025: Anfrage über das Kontaktformular",
+      subject:
+        "Move-Spirit-Fun 2026 Ocean Edition: Anfrage über das Kontaktformular",
       react: ContactFormEmailTemplate({
         name: input.name,
         email: input.email,
