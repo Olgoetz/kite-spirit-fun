@@ -14,9 +14,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Kite Spirit Fun Event in Soma Bay, Ägypten",
+  title: "Move, Spirit und Fun Event (Ocean Edition) in Soma Bay, Ägypten",
   description:
-    "Kitesurfen, Yoga und Fitness Event in Soma Bay mit Michaela Süßbauer",
+    "Kitesurfen, Yoga und Fitness Event in Soma Bay mit Michaela Süßbauer und Katja Frank. Erlebe unvergessliche Momente am Roten Meer!",
   metadataBase: new URL(process.env.URL!),
   keywords: [
     "Kitesurfen",
@@ -31,9 +31,6 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: "/",
-  },
-  openGraph: {
-    images: "/opengraph-image.png",
   },
 };
 

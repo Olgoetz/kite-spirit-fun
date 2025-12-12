@@ -28,7 +28,7 @@ type ProgramPoint = {
 
 const program: ProgramPoint[] = [
   {
-    text: `Täglich Kitekurse für Anfänger und Fortgeschrittene*\n
+    text: `Täglich Kite- und Wingkurse für Anfänger und Fortgeschrittene*\n
     Wir rechnen nicht damit, aber falls es passieren sollte - einzigartige No Wind Solutions`,
     icon: MdKitesurfing,
   },

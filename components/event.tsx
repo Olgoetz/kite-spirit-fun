@@ -4,6 +4,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import michi_und_katja from "@/public/michi_und_katja.jpeg";
+import {
+  Waves,
+  Anchor,
+  Heart,
+  Sun,
+  Dumbbell,
+  ScanHeart,
+  WavesLadder,
+} from "lucide-react";
+import { TbYoga } from "react-icons/tb";
+import { IoBody } from "react-icons/io5";
 const Event = () => {
   return (
     <div
@@ -46,7 +57,8 @@ const Event = () => {
               <div className="grid grid-cols-1 gap-6 mb-6">
                 <div className="bg-white rounded-lg p-5 shadow-sm">
                   <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                    <span>💦</span> Wassersport-Fans?
+                    <Waves className="text-pink-500" size={24} />{" "}
+                    Wassersport-Fans?
                   </h3>
                   <p className="text-gray-700">
                     Kite- & Wing-Sessions in einer der schönsten Lagunen
@@ -56,7 +68,8 @@ const Event = () => {
 
                 <div className="bg-white rounded-lg p-5 shadow-sm">
                   <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                    <span>🤿</span> Unterwasserliebhaber?
+                    <WavesLadder className="text-pink-500" size={24} />{" "}
+                    Unterwasserliebhaber?
                   </h3>
                   <p className="text-gray-700">
                     Tauch- und Schnorchelspots, die dich sprachlos machen.
@@ -65,7 +78,8 @@ const Event = () => {
 
                 <div className="bg-white rounded-lg p-5 shadow-sm">
                   <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                    <span>🧘‍♀️</span> Mind & Body Genießer?
+                    <ScanHeart className="text-pink-500" size={24} /> Mind &
+                    Body Genießer?
                   </h3>
                   <p className="text-gray-700">
                     Yoga bei Sonnenaufgang, Flow & Mobility, Faszientraining und
@@ -75,7 +89,8 @@ const Event = () => {
 
                 <div className="bg-white rounded-lg p-5 shadow-sm">
                   <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                    <span>☀️</span> Einfach Sonne tanken & genießen?
+                    <Sun className="text-pink-500" size={24} /> Einfach Sonne
+                    tanken & genießen?
                   </h3>
                   <p className="text-gray-700">
                     Liegestuhl, Meeresrauschen und eine Community, die dich
@@ -86,7 +101,8 @@ const Event = () => {
 
               <div className="bg-pink-100 rounded-lg p-5 mb-6">
                 <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                  <span>💕</span> Alle willkommen:
+                  <Heart className="text-pink-500 fill-pink-500" size={24} />{" "}
+                  Alle willkommen:
                 </h3>
                 <p className="text-gray-700">
                   Paare, Alleinreisende, Freunde, Anfänger, Fortgeschrittene –
