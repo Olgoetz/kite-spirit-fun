@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import michi_und_katja from "@/public/michi_und_katja.jpeg";
+import michi_und_katja from "@/public/michi_und_katja2.jpeg";
 import {
   Waves,
   Anchor,
@@ -146,7 +146,7 @@ const Event = () => {
         Freue dich auf eine Woche mit:
       </p>
 
-      <div className="grid mt-8 md:grid-cols-3 gap-6 items-center text-center mx-auto">
+      <div className="grid mt-8 md:grid-cols-4 gap-6 items-center text-center mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1, x: [0, 100, 0] }}
@@ -159,8 +159,9 @@ const Event = () => {
               className="object-cover -z-10 rounded-lg"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-            <p className="text-white uppercase text-3xl bg-slate-300/50 w-50 p-8">
-              Kite
+            <p className="text-white uppercase text-2xl bg-slate-400/50 w-60 p-8">
+              Kite & <br />
+              Wing
             </p>
           </div>
         </motion.div>
@@ -175,8 +176,8 @@ const Event = () => {
               fill
               className="object-cover object-left -z-10 rounded-lg"
             />
-            <p className="text-white uppercase text-3xl bg-slate-300/50 w-50 p-8">
-              Fitness
+            <p className="text-white uppercase text-2xl bg-slate-400/60 w-60 p-8">
+              Fitness & Yoga
             </p>
           </div>
         </motion.div>
@@ -191,8 +192,25 @@ const Event = () => {
               fill
               className="object-cover -z-10 rounded-lg"
             />
-            <p className="text-white uppercase text-3xl bg-slate-300/50 w-50 p-8">
+            <p className="text-white uppercase text-2xl bg-slate-400/50 w-60 p-8">
+              Spirit & <br />
               Fun
+            </p>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, x: [0, 100, 0] }}
+        >
+          <div className="flex relative h-100 items-center justify-center">
+            <Image
+              src="/diving.jpeg"
+              alt="Spaß SomaBay Ägypten"
+              fill
+              className="object-cover -z-10 rounded-lg"
+            />
+            <p className="text-white uppercase text-2xl bg-slate-400/50 w-60 p-8">
+              Scuba & Schnorcheln
             </p>
           </div>
         </motion.div>
