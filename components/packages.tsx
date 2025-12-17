@@ -19,34 +19,34 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 const standardContent =
   "Welcome Cocktail, Sunrise Yoga mit Sekt & Croissant, Sunset Yoga auf der Dachterasse, DAYO, Mobility- und Faszientraining, Workouts, Bedouin Dinner am Strand, Sunset Boot Tour mit DJ, kostenloser Shuttleservice zum Kitespot und zurück, 7 Nächte, Halbpension, unbegrenzt Trinkwasser";
-const content = [
-  {
-    title: "Early Bird",
-    description: "täglich Fitness ohne Kiten",
-    extraContent: "Doppelzimmer, 20% Rabat bei buchung bis 31.01.2025",
-    price: "923",
-  },
-  {
-    title: "Paket 2",
-    description: "täglich Fitness und Kitekurs",
-    extraContent:
-      "Kitekurs Praxis mit 5 Ausfahrten, Kitekurs Theorie, Material",
+// const content = [
+//   {
+//     title: "Early Bird",
+//     description: "täglich Fitness ohne Kiten",
+//     extraContent: "Doppelzimmer, 20% Rabat bei buchung bis 31.01.2025",
+//     price: "923",
+//   },
+//   {
+//     title: "Paket 2",
+//     description: "täglich Fitness und Kitekurs",
+//     extraContent:
+//       "Kitekurs Praxis mit 5 Ausfahrten, Kitekurs Theorie, Material",
 
-    price: "825",
-  },
-  {
-    title: "Paket 3",
-    description: "täglich Fitness und Shuttelservice mit Material",
-    extraContent: "Shuttleservice 5 Ausfahrten, Material",
-    price: "730",
-  },
-  {
-    title: "Paket 4",
-    description: "täglich Fitness und Shuttleservice ohne Material",
-    extraContent: "Shuttleservice 5 Ausfahrten",
-    price: "550",
-  },
-];
+//     price: "825",
+//   },
+//   {
+//     title: "Paket 3",
+//     description: "täglich Fitness und Shuttelservice mit Material",
+//     extraContent: "Shuttleservice 5 Ausfahrten, Material",
+//     price: "730",
+//   },
+//   {
+//     title: "Paket 4",
+//     description: "täglich Fitness und Shuttleservice ohne Material",
+//     extraContent: "Shuttleservice 5 Ausfahrten",
+//     price: "550",
+//   },
+// ];
 
 function renderItems(
   content: string,
@@ -77,12 +77,6 @@ function renderItems(
 const Packages = () => {
   return (
     <div className="container mt-10 px-4 max-w-350 mx-auto">
-      <h2
-        id="pakete"
-        className="text-center font-bold text-2xl md:text-5xl text-pink-500 pt-20  uppercase border-b pb-2  "
-      >
-        Preise
-      </h2>
       <div className="py-20 grid md:grid-cols-3 gap-3">
         <div className="border-l-4 p-4 border-pink-500">
           <div className="flex items-center mb-2">
@@ -142,7 +136,13 @@ const Packages = () => {
           </p>
         </div>
       </div>
-      <div className="grid md:grid-cols-3 gap-y-8 gap-x-10 mt-20">
+      <h2
+        id="pakete"
+        className="text-center font-bold text-2xl md:text-5xl text-pink-500 uppercase border-b pb-2  "
+      >
+        Preise
+      </h2>
+      <div className="grid md:grid-cols-3 gap-y-8 gap-x-10 mt-30">
         <Card className="flex flex-col h-full border-pink-500">
           <CardHeader className="relative">
             <CardTitle className=" text-3xl">Early Bird</CardTitle>
@@ -171,7 +171,7 @@ const Packages = () => {
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-pink-500/70 text-white p-5 gap-4">
             <div className="flex">
-              <p className="text-5xl font-semibold">807,60 €*</p>
+              <p className="text-5xl font-semibold">907,60 €*</p>
               <EuroIcon size={50} color="white" />
             </div>
             <div className="text-center">
@@ -186,7 +186,7 @@ const Packages = () => {
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung 915,60 €</p>
+              <p>Doppelzimmer zur Einzelnutzung 1015,60 €</p>
             </div>
           </div>
         </Card>
@@ -219,7 +219,7 @@ const Packages = () => {
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-white text-pink-500 p-5 gap-4">
             <div className="flex">
-              <p className="text-5xl font-semibold">751,20 €*</p>
+              <p className="text-5xl font-semibold">851,20 €*</p>
               <EuroIcon size={50} color="white" />
             </div>
             <div className="text-center">
@@ -239,7 +239,7 @@ const Packages = () => {
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung 847,20 €</p>
+              <p>Doppelzimmer zur Einzelnutzung 947,20 €</p>
             </div>
           </div>
         </Card>
@@ -268,7 +268,7 @@ const Packages = () => {
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-pink-500/70 text-white p-5 gap-4">
             <div className="flex">
-              <p className="text-5xl font-semibold">864,00 €*</p>
+              <p className="text-5xl font-semibold">964,00 €*</p>
               <EuroIcon size={50} color="white" />
             </div>
             <div className="text-center">
@@ -284,7 +284,7 @@ const Packages = () => {
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung 984,00 €</p>
+              <p>Doppelzimmer zur Einzelnutzung 1084,00 €</p>
             </div>
           </div>
         </Card>
