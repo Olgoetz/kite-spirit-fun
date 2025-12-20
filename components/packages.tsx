@@ -7,18 +7,23 @@ import {
   CardContent,
   CardFooter,
 } from "./ui/card";
-import { CheckCircle2, EuroIcon, PlusCircleIcon } from "lucide-react";
+import {
+  CheckCircle2,
+  EuroIcon,
+  PlusCircleIcon,
+  WavesLadder,
+} from "lucide-react";
 import { MdKitesurfing } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoFitnessSharp } from "react-icons/io5";
 import { randomUUID } from "crypto";
 import { Booking } from "./booking/booking";
 import { TbFileTypePdf } from "react-icons/tb";
-import { Button } from "./ui/button";
+
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 const standardContent =
-  "Welcome Cocktail, Sunrise Yoga mit Sekt & Croissant, Sunset Yoga auf der Dachterasse, DAYO, Mobility- und Faszientraining, Workouts, Bedouin Dinner am Strand, Sunset Boot Tour mit DJ, kostenloser Shuttleservice zum Kitespot und zurück, 7 Nächte, Halbpension, unbegrenzt Trinkwasser";
+  "Welcome Cocktail, Sunrise & Sunset Yoga, professionelle Betreuung durch erfahrene Trainer, abwechslungsreiches Fitnessprogramm, Bedouin Dinner am Strand, Sunset Boot Tour, kostenloser Shuttleservice zum Kitespot und zurück, kostenloser Shuttleservice zur Marina, kostenlose Daybeds und Liegen am Strand, Tauschule direkt am Hotel, 6 Nächte, Halbpension, unbegrenzt Trinkwasser";
 // const content = [
 //   {
 //     title: "Early Bird",
@@ -76,12 +81,12 @@ function renderItems(
 }
 const Packages = () => {
   return (
-    <div className="container mt-10 px-4 max-w-350 mx-auto">
-      <div className="py-20 grid md:grid-cols-3 gap-3">
+    <div className="container mt-10 px-4 max-w-400 mx-auto">
+      <div className="py-20 grid md:grid-cols-4 gap-3">
         <div className="border-l-4 p-4 border-pink-500">
           <div className="flex items-center mb-2">
             <FaLocationDot size={24} className="text-pink-500 mr-4" />
-            <h3 className="text-pink-500 text-xl">Soma Bay</h3>
+            <h3 className="text-pink-500 text-xl">Breakers, Soma Bay</h3>
           </div>
 
           <p>
@@ -123,15 +128,34 @@ const Packages = () => {
         </div>
         <div className="border-l-4 p-4 border-pink-500">
           <div className="flex items-center mb-2">
+            <WavesLadder size={24} className="text-pink-500 mr-4" />
+            <h3 className="text-pink-500 text-xl">Orca</h3>
+          </div>
+          <p>
+            Die sehr renommierte, bestens ausgestattete{" "}
+            <a
+              className="text-pink-500"
+              href="https://orca.de/aegypten/tauchbasen-orca-dive-club-soma-bay"
+            >
+              Orca Tauchbasis
+            </a>{" "}
+            bietet Zugang zur attraktiven Rifflandschaft vom Ras Abu Soma mit
+            ihrer farbenprächtigen Vielfalt – vom Hausriff mit Riesenmuränen,
+            Zackenbarschen und Barrakudas bis zu den Top-Bootstauchplätzen der
+            Region Safaga. Die über 30 verschiedenen Tauchplätze begeistern mit
+            Drop-Offs, Gorgoniengärten, großem Fischreichtum und herrlichen
+            Korallenformationen.
+          </p>
+        </div>
+        <div className="border-l-4 p-4 border-pink-500">
+          <div className="flex items-center mb-2">
             <IoFitnessSharp size={24} className="text-pink-500 mr-4" />
             <h3 className="text-pink-500 text-xl">Fitness</h3>
           </div>
           <p>
-            Tägliche Kurse in einer traumhaften Umgebung mit Blick aufs Meer.
-            Vor dem Kiten gibt es spezielle Yoga- und Mobility-Sessions, die
-            euch optimal auf das Kitesurfen vorbereiten. Higlights wie Sunrise
-            Yoga direkt am Strand sowie Sundowner Yoga auf der Dachterrasse
-            direkt bei der Kitestation. Erlebt dynamische Workouts und
+            Tägliche Kurse in einer traumhaften Umgebung mit Blick aufs Meer. Am
+            Morgen gibt es spezielle Yoga- und Mobility-Sessions, die euch
+            optimal auf den Tag vorbereiten. Erlebt dynamische Workouts und
             DAYO-Sessions (Dance & Yoga) in einer inspirierenden Atmosphäre.
           </p>
         </div>
@@ -143,6 +167,7 @@ const Packages = () => {
         Preise
       </h2>
       <div className="grid md:grid-cols-3 gap-y-8 gap-x-10 mt-30">
+        {/* EARLY BIRD */}
         <Card className="flex flex-col h-full border-pink-500">
           <CardHeader className="relative">
             <CardTitle className=" text-3xl">Early Bird</CardTitle>
@@ -171,7 +196,7 @@ const Packages = () => {
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-pink-500/70 text-white p-5 gap-4">
             <div className="flex">
-              <p className="text-5xl font-semibold">907,60 €*</p>
+              <p className="text-5xl font-semibold">957,60 €*</p>
               <EuroIcon size={50} color="white" />
             </div>
             <div className="text-center">
@@ -186,7 +211,7 @@ const Packages = () => {
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung 1015,60 €</p>
+              <p>Doppelzimmer zur Einzelnutzung 1065,60 €</p>
             </div>
           </div>
         </Card>
@@ -219,7 +244,7 @@ const Packages = () => {
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-white text-pink-500 p-5 gap-4">
             <div className="flex">
-              <p className="text-5xl font-semibold">851,20 €*</p>
+              <p className="text-5xl font-semibold">901,20 €*</p>
               <EuroIcon size={50} color="white" />
             </div>
             <div className="text-center">
@@ -239,7 +264,7 @@ const Packages = () => {
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung 947,20 €</p>
+              <p>Doppelzimmer zur Einzelnutzung 997,20 €</p>
             </div>
           </div>
         </Card>
@@ -268,7 +293,7 @@ const Packages = () => {
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-pink-500/70 text-white p-5 gap-4">
             <div className="flex">
-              <p className="text-5xl font-semibold">964,00 €*</p>
+              <p className="text-5xl font-semibold">1014,00 €*</p>
               <EuroIcon size={50} color="white" />
             </div>
             <div className="text-center">
@@ -284,7 +309,7 @@ const Packages = () => {
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung 1084,00 €</p>
+              <p>Doppelzimmer zur Einzelnutzung 1134,00 €</p>
             </div>
           </div>
         </Card>
@@ -331,37 +356,68 @@ const Packages = () => {
       </div>
 
       <div className="mt-28 mb-10 max-w-350 mx-auto">
-        <div className="bg-linear-to-r from-pink-50 to-blue-50 rounded-xl p-8 shadow-lg">
-          <h3 className="text-3xl font-bold text-pink-500 text-center mb-6">
-            Preisliste für Verleih, Storage und Kurse
-          </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-linear-to-r from-pink-50 to-blue-50 rounded-xl p-8 shadow-lg">
+            <h3 className="text-3xl font-bold text-pink-500 text-center mb-6">
+              Preisliste Wassersport
+            </h3>
 
-          <div className="bg-white rounded-lg p-6 mb-6 shadow-sm">
-            <p className="text-center text-lg mb-4">
-              Die Preise für den Verleih von Kitematerial, Storage und Kurse
-              findest du hier:
-            </p>
+            <div className="bg-white rounded-lg p-6 mb-6 shadow-sm">
+              <p className="text-center text-lg mb-4">
+                Die Preise für den Verleih von Kitematerial, Storage und Kurse
+                findest du hier:
+              </p>
 
-            <Link
-              href="/Price List KiteHouse for Kite - Spirit - Fun - May 2026.pdf"
-              passHref
-              target="_blank"
-              className="flex items-center justify-center gap-4 bg-pink-500 hover:bg-pink-600 text-white rounded-lg p-4 transition-colors duration-200"
-            >
-              <TbFileTypePdf size={40} />
-              <span className="font-semibold text-lg">
-                Preisliste herunterladen (PDF)
-              </span>
-            </Link>
+              <Link
+                href="/Price List KiteHouse for Kite - Spirit - Fun - May 2026.pdf"
+                passHref
+                target="_blank"
+                className="flex items-center justify-center gap-4 bg-pink-500 hover:bg-pink-600 text-white rounded-lg p-4 transition-colors duration-200"
+              >
+                <TbFileTypePdf size={40} />
+                <span className="font-semibold text-lg">
+                  Preisliste herunterladen (PDF)
+                </span>
+              </Link>
+            </div>
+
+            <div className="bg-pink-100 rounded-lg p-6 text-center">
+              <p className="text-xl">
+                Auf die gelisteten Preise bekommst du{" "}
+                <span className="font-bold text-3xl text-pink-600">
+                  15% Rabatt!
+                </span>
+              </p>
+            </div>
           </div>
 
-          <div className="bg-pink-100 rounded-lg p-6 text-center">
-            <p className="text-xl">
-              Auf die gelisteten Preise bekommst du{" "}
-              <span className="font-bold text-3xl text-pink-600">
-                15% Rabatt!
-              </span>
-            </p>
+          <div className="bg-linear-to-r from-pink-50 to-blue-50 rounded-xl p-8 shadow-lg">
+            <h3 className="text-3xl font-bold text-pink-500 text-center mb-6">
+              Preisliste Tauchen
+            </h3>
+
+            <div className="bg-white rounded-lg p-6 mb-6 shadow-sm">
+              <p className="text-center text-lg mb-4">
+                Die Preise für den Verleih von Tauchmaterial und Ausflügen
+                findest du demnächst hier:
+              </p>
+
+              <div className="flex items-center justify-center gap-4 bg-slate-400 text-white rounded-lg p-4 opacity-60 cursor-not-allowed">
+                <TbFileTypePdf size={40} />
+                <span className="font-semibold text-lg">
+                  Preisliste herunterladen (PDF)
+                </span>
+              </div>
+            </div>
+
+            {/* <div className="bg-pink-100 rounded-lg p-6 text-center">
+              <p className="text-xl">
+                Auf die gelisteten Preise bekommst du{" "}
+                <span className="font-bold text-3xl text-pink-600">
+                  15% Rabatt!
+                </span>
+              </p>
+            </div> */}
           </div>
         </div>
       </div>

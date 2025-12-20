@@ -3,7 +3,8 @@ import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import hero_1 from "@/public/hero_1.jpeg";
-import { dancingScript } from "@/app/layout";
+import { dancingScript } from "@/lib/fonts";
+
 const Hero = () => {
   return (
     <div>
@@ -26,7 +27,7 @@ const Hero = () => {
               <p>in der traumhaften SomaBay in Ägypten</p>
             </h1>
             <p
-              className="text-xl md:text-6xl font-black"
+              className="text-2xl md:text-6xl font-black"
               style={{
                 fontWeight: 2000,
               }}

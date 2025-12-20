@@ -4,17 +4,10 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import michi_und_katja from "@/public/michi_und_katja2.jpeg";
-import {
-  Waves,
-  Anchor,
-  Heart,
-  Sun,
-  Dumbbell,
-  ScanHeart,
-  WavesLadder,
-} from "lucide-react";
+import { Waves, Heart, Sun, ScanHeart, WavesLadder } from "lucide-react";
 import { TbYoga } from "react-icons/tb";
 import { IoBody } from "react-icons/io5";
+import { dancingScript } from "@/lib/fonts";
 const Event = () => {
   return (
     <div
@@ -129,6 +122,14 @@ const Event = () => {
                 <p className="text-center text-pink-600 font-bold text-xl mt-4">
                   Dein unvergessliches Erlebnis in Soma Bay wartet auf dich!
                 </p>
+                <p className="text-center font-bold text-xl mt-4">
+                  Wir freuen uns auf dich!
+                </p>
+                <p
+                  className={`${dancingScript.className} text-4xl text-center mt-4`}
+                >
+                  Michi & Katja
+                </p>
               </div>
             </div>
 
@@ -229,7 +230,7 @@ const Event = () => {
               Preis
             </h3>
             <p className="text-2xl">
-              ab 851,20 EUR plus Anreise und Geräteverleih
+              ab 901,20 EUR plus Anreise und Geräteverleih
             </p>
           </div>
           <div>

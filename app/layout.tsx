@@ -2,19 +2,13 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 
 import type { Metadata } from "next";
-import { Roboto, Dancing_Script } from "next/font/google";
+import { Roboto } from "next/font/google";
 import { Footer } from "@/components/footer";
 
 import ScrollToTopButton from "@/components/scrollToTopButton";
 import { Toaster } from "@/components/ui/sonner";
 const roboto = Roboto({
   weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-export const dancingScript = Dancing_Script({
-  weight: ["400", "700"],
   subsets: ["latin"],
   display: "swap",
 });

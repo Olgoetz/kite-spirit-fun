@@ -1,25 +1,23 @@
-import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from "./ui/card";
+import { Card, CardHeader, CardContent } from "./ui/card";
 
 import Image from "next/image";
 import { IconType } from "react-icons";
 import { AiFillHeart } from "react-icons/ai";
 import { TbYoga } from "react-icons/tb";
-import { IoFitnessSharp } from "react-icons/io5";
-import { FaPizzaSlice } from "react-icons/fa6";
+import { IoBoat, IoFitnessSharp } from "react-icons/io5";
 import {
   MdBreakfastDining,
   MdDinnerDining,
   MdKitesurfing,
 } from "react-icons/md";
-import { LucideIcon } from "lucide-react";
+import {
+  LucideIcon,
+  Sailboat,
+  Sun,
+  SunsetIcon,
+  WavesLadder,
+} from "lucide-react";
+import { GiBoatPropeller } from "react-icons/gi";
 
 type ProgramPoint = {
   text: string;
@@ -29,16 +27,17 @@ type ProgramPoint = {
 const program: ProgramPoint[] = [
   {
     text: `Täglich Kite- und Wingkurse für Anfänger und Fortgeschrittene*\n
-    Wir rechnen nicht damit, aber falls es passieren sollte - einzigartige No Wind Solutions`,
+    Wir rechnen nicht damit, aber falls es passieren sollte - wir haben für No Wind Solutions gesorgt`,
     icon: MdKitesurfing,
   },
   {
-    text: "Yoga, Mobility und Faszientraining zur Regeneration sowie zur optimalen Vorbereitung auf´s Wasser",
+    text: `Yoga, Mobility und Faszientraining zur Regeneration sowie zur optimalen Vorbereitung auf´s Wasser\n
+     Highlights: DAYO, Dance & Workout Specials`,
     icon: AiFillHeart,
   },
   {
-    text: "Highlights: DAYO, Dance & Workout Specials",
-    icon: IoFitnessSharp,
+    text: "Tauchschule direkt am Hotel - entdecke die faszinierende Unterwasserwelt des Roten Meeres",
+    icon: WavesLadder,
   },
   {
     text: "Sunrise Yoga am Strand sowie Sundowner Yoga auf der Dachterasse",
@@ -46,7 +45,7 @@ const program: ProgramPoint[] = [
   },
   {
     text: "Atemberaubende Sunsettour mit DJ, kühlen Drinks und jeder Menge Spaß",
-    icon: MdBreakfastDining,
+    icon: IoBoat,
   },
   {
     text: "Bedouin Dinner direkt am Strand - geniesse bestes traditionelles Essen in einer wundervollen Atmosphäre wie in 1001 Nacht",

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import katja_yoga from "@/public/katja_yoga.jpeg";
+import { dancingScript } from "@/lib/fonts";
 
 const Aboutme = () => {
   return (
@@ -13,7 +14,9 @@ const Aboutme = () => {
 
       <div className="container max-w-300 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 py-12 items-center justify-between">
         <div>
-          <h3 className="font-bold text-2xl">Michaela</h3>
+          <h3 className={`${dancingScript.className} font-bold text-2xl`}>
+            Michaela
+          </h3>
           <p className="text-left text-pink-500">
             Motivation, Power, Temperament, Lebensfreude und ein strahlendes
             Lächeln…
@@ -35,6 +38,11 @@ const Aboutme = () => {
             teilen kann. Anfänger und Fortgeschrittene sind herzlich willkommen.
             Ich und auch das Breakers freuen sich auf DICH.
           </p>
+          <ul>
+            <li className="text-pink-500">
+              <a href="www.michaela-suessbauer.de">www.michael-suessbauer.de</a>
+            </li>
+          </ul>
         </div>
         <div className="h-100 md:h-full relative">
           <Image
@@ -57,7 +65,9 @@ const Aboutme = () => {
           />
         </div>
         <div>
-          <h3 className="font-bold text-2xl">Katja</h3>
+          <h3 className={`${dancingScript.className} font-bold text-2xl`}>
+            Katja
+          </h3>
           <p className="text-left text-pink-500">
             Co-Trainerin & Wassersport-Enthusiast
           </p>
