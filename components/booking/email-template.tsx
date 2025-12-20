@@ -8,8 +8,7 @@ export const BookingEmailTemplate: React.FC<Readonly<BookingFormData>> = ({
   email,
   packageName,
   numberOfPersons,
-  wantKite,
-  kiteLevel,
+  message,
 }) => {
   return (
     <Html>
@@ -22,14 +21,7 @@ export const BookingEmailTemplate: React.FC<Readonly<BookingFormData>> = ({
               <p className="">Email-Adresse: {email} </p>
               <p className="">Paket : {packageName} </p>
               <p className="">Anzahl Personen : {numberOfPersons} </p>
-              {wantKite ? (
-                <>
-                  <p>Kitesurfen: ja</p>
-                  <p>Level: {kiteLevel}</p>
-                </>
-              ) : (
-                <p>Kitesurfen: nein</p>
-              )}
+              {message && <p className="">Nachricht : {message} </p>}
             </div>
           </Container>
         </Body>

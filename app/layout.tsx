@@ -44,9 +44,9 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Navbar />
         {children}
-        <Toaster position="bottom-right" />
         <Footer />
 
+        <Toaster position="bottom-right" />
         <ScrollToTopButton />
       </body>
     </html>

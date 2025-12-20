@@ -31,6 +31,7 @@ import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { bookingFormSchema, type BookingFormData } from "./validations";
 import { z } from "zod";
+import { Textarea } from "../ui/textarea";
 
 export function Booking({
   package_name,
@@ -40,13 +41,13 @@ export function Booking({
   styles?: string;
 }) {
   const [open, setOpen] = useState<boolean>(false);
-  const [wantKite, setWantKite] = useState<boolean>(false);
+  // const [wantKite, setWantKite] = useState<boolean>(false);
   const [errors, setErrors] =
     useState<z.ZodFormattedError<BookingFormData> | null>(null);
 
-  const handleWantKite = () => {
-    setWantKite(!wantKite);
-  };
+  // const handleWantKite = () => {
+  //   setWantKite(!wantKite);
+  // };
 
   const [isPendingAction, setIsPendingAction] = useState(false);
 
@@ -57,7 +58,7 @@ export function Booking({
 
     const formData = new FormData(e.currentTarget);
     formData.set("packageName", package_name);
-    formData.set("wantKite", wantKite ? "true" : "");
+    // formData.set("wantKite", wantKite ? "true" : "");
 
     // Client-side validation
     const formDataObj = Object.fromEntries(formData);
@@ -74,7 +75,7 @@ export function Booking({
       await sendBookingInquiry(formData);
       toast.success("Anfrage verschickt!");
       setOpen(false);
-      setWantKite(false);
+      // setWantKite(false);
       setErrors(null);
     } catch (error) {
       console.error("Error executing server action", error);
@@ -135,10 +136,10 @@ export function Booking({
           )}
           <Label htmlFor="numberOfPersons">Personenzahl</Label>
           <Select name="numberOfPersons" defaultValue="1">
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-45">
               <SelectValue placeholder="1" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white">
               <SelectItem value="1">1</SelectItem>
               <SelectItem value="2">2</SelectItem>
               <SelectItem value="3">3</SelectItem>
@@ -150,14 +151,17 @@ export function Booking({
             </SelectContent>
           </Select>
 
-          <Label htmlFor="wantKite">Ich möchte/kann Kitesurfen</Label>
-          <Switch
+          <Label>Nachricht (optional)</Label>
+          <Textarea name="message" />
+
+          {/* <Label htmlFor="wantKite">Ich möchte/kann Kitesurfen</Label> */}
+          {/* <Switch
             name="wantKite"
             checked={wantKite}
             onCheckedChange={handleWantKite}
-            // defaultValue={wantKite}
-          />
-          {wantKite && (
+     
+          /> */}
+          {/* {wantKite && (
             <>
               <Label htmlFor="kiteLevel">Mein Kite-Level</Label>
               <Select name="kiteLevel">
@@ -181,7 +185,7 @@ export function Booking({
                 </p>
               )}
             </>
-          )}
+          )} */}
           <Button
             className="w-full hover:bg-pink-500 hover:text-white"
             type="submit"

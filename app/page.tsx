@@ -5,9 +5,8 @@ import Event from "@/components/event";
 import Hero from "@/components/hero";
 
 import Packages from "@/components/packages";
-import Program from "@/components/program";
+
 import Speparator from "@/components/separator";
-import { Toaster } from "@/components/ui/sonner";
 
 import Video from "@/components/video";
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
       <Event />
 
       {/* <Video /> */}
-      <Program />
+      {/* <Program /> */}
       <Speparator imageSrc="/background.JPG" alt="SomaBay Ägypten" />
 
       <Packages />

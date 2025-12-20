@@ -45,9 +45,9 @@ export default function Contact() {
     }
 
     try {
-      //await sendContactMessage(formData);
-      // fromRef.current?.reset();
-      // setErrors(null);
+      await sendContactMessage(formData);
+      fromRef.current?.reset();
+      setErrors(null);
 
       setWasSuccessful(true);
     } catch (error) {

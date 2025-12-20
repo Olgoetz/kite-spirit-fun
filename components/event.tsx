@@ -233,12 +233,12 @@ const Event = () => {
               ab 901,20 EUR plus Anreise und Geräteverleih
             </p>
           </div>
-          <div>
+          {/* <div>
             <h3 className="text-4xl text-pink-500 font-extrabold mb-3">
               Kiteschule
             </h3>
             <p>7 Bft KiteHouse Soma Bay</p>
-          </div>
+          </div> */}
         </div>
         <div className="md:col-span-2 w-full h-full ">
           <div className="bg-white  rounded-lg relative h-50 md:h-full ">

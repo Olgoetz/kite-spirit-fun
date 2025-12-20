@@ -27,8 +27,7 @@ export const sendBookingInquiry = async (formData: FormData) => {
         email: input.email,
         numberOfPersons: input.numberOfPersons,
         packageName: input.packageName,
-        wantKite: input.wantKite,
-        kiteLevel: input.kiteLevel,
+        message: input.message,
       }),
     });
     console.log("Email sent");
