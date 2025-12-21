@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Footer } from "@/components/footer";
-
+import { Analytics } from "@vercel/analytics/next";
 import ScrollToTopButton from "@/components/scrollToTopButton";
 import { Toaster } from "@/components/ui/sonner";
 const roboto = Roboto({
@@ -48,6 +48,7 @@ export default function RootLayout({
 
         <Toaster position="bottom-right" />
         <ScrollToTopButton />
+        <Analytics />
       </body>
     </html>
   );
