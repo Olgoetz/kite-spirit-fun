@@ -1,6 +1,7 @@
 import Image from "next/image";
 import katja_yoga from "@/public/katja_yoga.jpeg";
 import { dancingScript } from "@/lib/fonts";
+import Link from "next/link";
 
 const Aboutme = () => {
   return (
@@ -40,7 +41,9 @@ const Aboutme = () => {
           </p>
           <ul>
             <li className="text-pink-500">
-              <a href="www.michaela-suessbauer.de">www.michael-suessbauer.de</a>
+              <Link href="https://michaela-suessbauer.de">
+                www.michaela-suessbauer.de
+              </Link>
             </li>
           </ul>
         </div>
