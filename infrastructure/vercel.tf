@@ -3,8 +3,7 @@ resource "vercel_project" "this" {
   name      = github_repository.this.name
   framework = "nextjs"
 
-  preview_comments           = false
-  serverless_function_region = "fra1"
+
   git_repository = {
     type              = "github"
     repo              = github_repository.this.full_name
@@ -14,14 +13,19 @@ resource "vercel_project" "this" {
     deployment_type    = "none"
     protect_production = false
   }
+  enable_preview_feedback = false
+
+  resource_config = {
+    function_default_regions = ["fra1"]
+  }
 
 
 }
 
 resource "vercel_project_domain" "prod" {
-  project_id = vercel_project.this.id
-  domain     = split("https://", var.URL)[1]
-  redirect = vercel_project_domain.prod_https.domain
+  project_id           = vercel_project.this.id
+  domain               = split("https://", var.URL)[1]
+  redirect             = vercel_project_domain.prod_https.domain
   redirect_status_code = 308
 
 }

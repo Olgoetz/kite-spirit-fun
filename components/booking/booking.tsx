@@ -1,14 +1,13 @@
 "use client";
-import React, { use, useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { BeatLoader } from "react-spinners";
+
 import { Switch } from "@/components/ui/switch";
 import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -28,10 +27,11 @@ import {
 } from "@/components/ui/select";
 
 import { sendBookingInquiry } from "./actions";
-import { useServerAction } from "zsa-react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
-import { set } from "zod";
+import { bookingFormSchema, type BookingFormData } from "./validations";
+import { z } from "zod";
+import { Textarea } from "../ui/textarea";
 
 export function Booking({
   package_name,
@@ -41,32 +41,49 @@ export function Booking({
   styles?: string;
 }) {
   const [open, setOpen] = useState<boolean>(false);
-  const [wantKite, setWantKite] = useState<boolean>(false);
+  // const [wantKite, setWantKite] = useState<boolean>(false);
+  const [errors, setErrors] =
+    useState<z.ZodFormattedError<BookingFormData> | null>(null);
 
-  const handleWantKite = () => {
-    setWantKite(!wantKite);
+  // const handleWantKite = () => {
+  //   setWantKite(!wantKite);
+  // };
+
+  const [isPendingAction, setIsPendingAction] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsPendingAction(true);
+    setErrors(null);
+
+    const formData = new FormData(e.currentTarget);
+    formData.set("packageName", package_name);
+    // formData.set("wantKite", wantKite ? "true" : "");
+
+    // Client-side validation
+    const formDataObj = Object.fromEntries(formData);
+    const validation = bookingFormSchema.safeParse(formDataObj);
+
+    if (!validation.success) {
+      setErrors(validation.error.format());
+      toast.error("Bitte überprüfe die Formularfelder!");
+      setIsPendingAction(false);
+      return;
+    }
+
+    try {
+      await sendBookingInquiry(formData);
+      toast.success("Anfrage verschickt!");
+      setOpen(false);
+      // setWantKite(false);
+      setErrors(null);
+    } catch (error) {
+      console.error("Error executing server action", error);
+      toast.error("Fehler beim Senden der Anfrage. Versuche es später erneut.");
+    } finally {
+      setIsPendingAction(false);
+    }
   };
-
-  const { isPending, isError, executeFormAction, error, isSuccess } =
-    useServerAction(sendBookingInquiry, {
-      bind: {
-        packageName: package_name,
-      },
-
-      onError: ({ err }) => {
-        console.log(err);
-        if (err.code !== "INPUT_PARSE_ERROR") {
-          toast.error(
-            "Fehler beim Senden der Anfrage. Versuche es später erneut."
-          );
-        }
-      },
-      onSuccess: () => {
-        toast.success("Anfrage verschickt!");
-        setOpen(false);
-      },
-    });
-
   // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   //   e.preventDefault();
   //   const form = e.currentTarget;
@@ -97,26 +114,32 @@ export function Booking({
           Buchungsanfrage
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-[500px]">
-        <form className="flex flex-col gap-4" action={executeFormAction}>
+      <DialogContent className="max-w-125 bg-white">
+        <DialogHeader>
+          <DialogTitle>Buchungsanfrage</DialogTitle>
+          <DialogDescription>
+            Fülle das Formular aus, um deine Buchungsanfrage zu senden.
+          </DialogDescription>
+        </DialogHeader>
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <Label htmlFor="packageName">Paket</Label>
           <Input readOnly name="packageName" disabled value={package_name} />
           <Label htmlFor="name">Name</Label>
           <Input name="name" type="text" />
-          {error?.fieldErrors?.name && (
-            <p className="text-red-500">{error.fieldErrors.name}</p>
+          {errors?.name && (
+            <p className="text-red-500 text-sm">{errors.name._errors[0]}</p>
           )}
           <Label htmlFor="email">Email</Label>
-          {error?.fieldErrors?.email && (
-            <p className="text-red-500">{error.fieldErrors.email}</p>
-          )}
           <Input name="email" type="text" />
+          {errors?.email && (
+            <p className="text-red-500 text-sm">{errors.email._errors[0]}</p>
+          )}
           <Label htmlFor="numberOfPersons">Personenzahl</Label>
           <Select name="numberOfPersons" defaultValue="1">
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-45">
               <SelectValue placeholder="1" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white">
               <SelectItem value="1">1</SelectItem>
               <SelectItem value="2">2</SelectItem>
               <SelectItem value="3">3</SelectItem>
@@ -128,14 +151,17 @@ export function Booking({
             </SelectContent>
           </Select>
 
-          <Label htmlFor="wantKite">Ich möchte/kann Kitesurfen</Label>
-          <Switch
+          <Label>Nachricht (optional)</Label>
+          <Textarea name="message" />
+
+          {/* <Label htmlFor="wantKite">Ich möchte/kann Kitesurfen</Label> */}
+          {/* <Switch
             name="wantKite"
             checked={wantKite}
             onCheckedChange={handleWantKite}
-            // defaultValue={wantKite}
-          />
-          {wantKite && (
+     
+          /> */}
+          {/* {wantKite && (
             <>
               <Label htmlFor="kiteLevel">Mein Kite-Level</Label>
               <Select name="kiteLevel">
@@ -153,13 +179,20 @@ export function Booking({
                   ))}
                 </SelectContent>
               </Select>
+              {errors?.kiteLevel && (
+                <p className="text-red-500 text-sm">
+                  {errors.kiteLevel._errors[0]}
+                </p>
+              )}
             </>
-          )}
-          {error?.fieldErrors?.kiteLevel && (
-            <p className="text-red-500">{error.fieldErrors.kiteLevel}</p>
-          )}
-          <Button className="w-full" type="submit" disabled={isPending}>
-            {isPending ? "Sende..." : "Abschicken"}
+          )} */}
+          <Button
+            className="w-full hover:bg-pink-500 hover:text-white"
+            type="submit"
+            variant={"outline"}
+            disabled={isPendingAction}
+          >
+            {isPendingAction ? "Sende..." : "Abschicken"}
           </Button>
         </form>
       </DialogContent>

@@ -24,8 +24,8 @@ const links = [
     link: "#pakete",
   },
   {
-    label: "Über Mich",
-    link: "#uebermich",
+    label: "Über Uns",
+    link: "#ueberuns",
   },
   {
     label: "Kontakt",
