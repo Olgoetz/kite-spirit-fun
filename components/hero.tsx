@@ -13,10 +13,13 @@ const Hero = () => {
           <Image
             fill={true}
             priority={true}
-            quality={75}
+            quality={85}
+            sizes="100vw"
+            fetchPriority="high"
             src={hero_1}
             alt="Breakers"
             className="object-cover"
+            placeholder="blur"
           />
         </div>
         <div className="absolute bg-slate-400/50 rounded-lg  max-w-300 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-full z-20  text-white  space-y-3 text-center">

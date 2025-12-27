@@ -85,9 +85,21 @@ const Navbar = () => {
       {/* MOBILE MENU */}
       <div className="md:hidden p-3 absolute top-0 right-0 float-right  text-white cursor-pointer z-50">
         {navbar ? (
-          <RxCross1 onClick={() => setNavbar(!navbar)} size={25} />
+          <button
+            onClick={() => setNavbar(!navbar)}
+            aria-label="Close menu"
+            className="bg-transparent border-none"
+          >
+            <RxCross1 size={25} />
+          </button>
         ) : (
-          <GiHamburgerMenu onClick={() => setNavbar(!navbar)} size={25} />
+          <button
+            onClick={() => setNavbar(!navbar)}
+            aria-label="Open menu"
+            className="bg-transparent border-none"
+          >
+            <GiHamburgerMenu size={25} />
+          </button>
         )}
       </div>
 

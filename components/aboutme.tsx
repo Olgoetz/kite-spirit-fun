@@ -50,6 +50,8 @@ const Aboutme = () => {
         <div className="h-100 md:h-full relative">
           <Image
             fill
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
             style={{ objectFit: "cover" }}
             src="/kitesurfen.jpg"
             alt="Kitesurfen"
@@ -61,6 +63,8 @@ const Aboutme = () => {
         <div className="h-100 md:h-full relative">
           <Image
             fill
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
             style={{ objectFit: "cover" }}
             src={katja_yoga}
             alt="Katja Frank - Yoga"

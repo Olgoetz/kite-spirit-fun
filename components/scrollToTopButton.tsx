@@ -34,6 +34,7 @@ const ScrollToTopButton: React.FC = () => {
         { hidden: !isVisible }
       )}
       onClick={scrollToTop}
+      aria-label="Scroll to top"
     >
       <ArrowUp width={20} height={20} />
     </button>
