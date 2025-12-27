@@ -53,13 +53,13 @@ export const metadata: Metadata = {
     title: "Move, Spirit und Fun Event (Ocean Edition) in Soma Bay, Ägypten",
     description:
       "Kitesurfen, Yoga und Fitness Event in Soma Bay mit Michaela Süßbauer und Katja Frank. Erlebe unvergessliche Momente am Roten Meer!",
-    url: "/",
+    url: process.env.URL,
     siteName: "Kite Spirit Fun",
     locale: "de_DE",
     type: "website",
     images: [
       {
-        url: "/opengraph-image",
+        url: `${process.env.URL}/opengraph-image.png`,
         width: 1200,
         height: 630,
         alt: "Move, Spirit und Fun Event - Ocean Edition in Soma Bay",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "Move, Spirit und Fun Event (Ocean Edition) in Soma Bay, Ägypten",
     description:
       "Kitesurfen, Yoga und Fitness Event in Soma Bay mit Michaela Süßbauer und Katja Frank. Erlebe unvergessliche Momente am Roten Meer!",
-    images: ["/opengraph-image"],
+    images: [`${process.env.URL}/opengraph-image.png`],
   },
   robots: {
     index: true,
