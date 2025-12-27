@@ -8,7 +8,9 @@ const Speparator = ({ imageSrc, alt }: { imageSrc: string; alt: string }) => {
         fill={true}
         src={imageSrc}
         alt={alt}
-        quality={100}
+        loading="lazy"
+        sizes="100vw"
+        quality={75}
         className="object-cover"
       />
     </div>

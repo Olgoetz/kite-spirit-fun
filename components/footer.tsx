@@ -44,6 +44,7 @@ export const Footer = () => {
                       alt="Michaela Suessbauer"
                       width={50}
                       height={100}
+                      loading="lazy"
                     />
                   </Link>
                 </div>

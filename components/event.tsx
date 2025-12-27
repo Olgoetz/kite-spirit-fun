@@ -137,6 +137,8 @@ const Event = () => {
               <Image
                 src={michi_und_katja}
                 alt="Michaela und Katja"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="rounded-lg h-full w-full object-cover"
               />
             </div>
@@ -157,6 +159,7 @@ const Event = () => {
               src="/michi_kite.jpeg"
               alt="Kitesurfen SomaBay Ägypten"
               fill
+              loading="lazy"
               className="object-cover -z-10 rounded-lg"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
@@ -175,6 +178,7 @@ const Event = () => {
               src="/workout_somabay.jpg"
               alt="Fitness SomaBay Ägypten"
               fill
+              loading="lazy"
               className="object-cover object-left -z-10 rounded-lg"
             />
             <p className="text-white uppercase text-2xl bg-slate-400/60 w-60 p-8">
@@ -191,6 +195,7 @@ const Event = () => {
               src="/community_1.jpeg"
               alt="Spaß SomaBay Ägypten"
               fill
+              loading="lazy"
               className="object-cover -z-10 rounded-lg"
             />
             <p className="text-white uppercase text-2xl bg-slate-400/50 w-60 p-8">
@@ -208,6 +213,7 @@ const Event = () => {
               src="/diving.jpeg"
               alt="Spaß SomaBay Ägypten"
               fill
+              loading="lazy"
               className="object-cover -z-10 rounded-lg"
             />
             <p className="text-white uppercase text-2xl bg-slate-400/50 w-60 p-8">
@@ -247,6 +253,8 @@ const Event = () => {
                 src="https://kitehouse-somabay.com/UP1/wp-content/uploads/A-dream-come-true.jpg"
                 alt="Kitehouse Soma Bay"
                 fill
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 66vw"
                 className="object-cover rounded-lg"
               />
             </Link>
