@@ -25,7 +25,9 @@ const Hero = () => {
         <div className="absolute bg-slate-400/50 rounded-lg  max-w-300 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-full z-20  text-white  space-y-3 text-center">
           <div className="p-8 space-y-8">
             <h1 className="text-3xl md:text-6xl font-extrabold leading-14 md:leading-20">
-              <span className="text-white">Move-Spirit-Fun</span>{" "}
+              <span className={`${dancingScript.className}`}>
+                Move-Spirit-Fun
+              </span>{" "}
               <p className={`${dancingScript.className}`}>Ocean Edition</p>
               <p>in der traumhaften SomaBay in Ägypten</p>
             </h1>
