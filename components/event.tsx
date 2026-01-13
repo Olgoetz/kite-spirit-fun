@@ -8,6 +8,7 @@ import { Waves, Heart, Sun, ScanHeart, WavesLadder } from "lucide-react";
 import { TbYoga } from "react-icons/tb";
 import { IoBody } from "react-icons/io5";
 import { dancingScript } from "@/lib/fonts";
+import { prices } from "@/lib/prices";
 const Event = () => {
   return (
     <div
@@ -236,7 +237,7 @@ const Event = () => {
               Preis
             </h3>
             <p className="text-2xl">
-              ab 901,20 EUR plus Anreise und Geräteverleih
+              ab {prices.superEarlyBird.double} plus Anreise und Geräteverleih
             </p>
           </div>
           {/* <div>
