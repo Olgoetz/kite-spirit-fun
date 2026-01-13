@@ -22,6 +22,7 @@ import { TbFileTypePdf } from "react-icons/tb";
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { prices } from "@/lib/prices";
 const standardContent =
   "Welcome Cocktail, Sunrise & Sunset Yoga, professionelle Betreuung durch erfahrene Trainer, abwechslungsreiches Fitnessprogramm, Bedouin Dinner am Strand, Sunset Boot Tour, kostenloser Shuttleservice zum Kitespot und zurück, kostenloser Shuttleservice zur Marina, kostenlose Daybeds und Liegen am Strand, Tauschule direkt am Hotel, 6 Nächte, Halbpension, unbegrenzt Trinkwasser";
 // const content = [
@@ -196,8 +197,9 @@ const Packages = () => {
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-pink-500/70 text-white p-5 gap-4">
             <div className="flex">
-              <p className="text-5xl font-semibold">957,60 €*</p>
-              <EuroIcon size={50} color="white" />
+              <p className="text-5xl font-semibold">
+                {prices.earlyBird.double}*
+              </p>
             </div>
             <div className="text-center">
               <p>im Doppelzimmer</p>
@@ -211,7 +213,7 @@ const Packages = () => {
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung 1065,60 €</p>
+              <p>Doppelzimmer zur Einzelnutzung {prices.earlyBird.single}</p>
             </div>
           </div>
         </Card>
@@ -244,7 +246,9 @@ const Packages = () => {
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-white text-pink-500 p-5 gap-4">
             <div className="flex">
-              <p className="text-5xl font-semibold">901,20 €*</p>
+              <p className="text-5xl font-semibold">
+                {prices.superEarlyBird.double}*
+              </p>
               <EuroIcon size={50} color="white" />
             </div>
             <div className="text-center">
@@ -264,7 +268,9 @@ const Packages = () => {
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung 997,20 €</p>
+              <p>
+                Doppelzimmer zur Einzelnutzung {prices.superEarlyBird.single}
+              </p>
             </div>
           </div>
         </Card>
@@ -293,8 +299,7 @@ const Packages = () => {
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-pink-500/70 text-white p-5 gap-4">
             <div className="flex">
-              <p className="text-5xl font-semibold">1014,00 €*</p>
-              <EuroIcon size={50} color="white" />
+              <p className="text-5xl font-semibold">{prices.regular.double}*</p>
             </div>
             <div className="text-center">
               <p>im Doppelzimmer</p>
@@ -309,7 +314,7 @@ const Packages = () => {
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung 1134,00 €</p>
+              <p>Doppelzimmer zur Einzelnutzung {prices.regular.single}</p>
             </div>
           </div>
         </Card>
