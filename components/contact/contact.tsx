@@ -136,7 +136,7 @@ export default function Contact() {
                 Frage genutzt. Weitere Informationen findest Du in den{" "}
                 <Link
                   className="text-pink-500"
-                  href="https://www.michaela-suessbauer.de/datenschutz.html"
+                  href="/datenschutz"
                   target="_blank"
                 >
                   Datenschutzhinweisen.
