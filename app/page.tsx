@@ -8,7 +8,6 @@ import Packages from "@/components/packages";
 
 import Speparator from "@/components/separator";
 
-import Video from "@/components/video";
 export default function Home() {
   return (
     <main>
@@ -16,7 +15,6 @@ export default function Home() {
       <Hero />
       <Event />
 
-      {/* <Video /> */}
       {/* <Program /> */}
       <Speparator imageSrc="/background.JPG" alt="SomaBay Ägypten" />
 
