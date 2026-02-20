@@ -9,6 +9,7 @@ import { TbYoga } from "react-icons/tb";
 import { IoBody } from "react-icons/io5";
 import { dancingScript } from "@/lib/fonts";
 import { prices } from "@/lib/prices";
+import InstagramReel from "./instagramReel";
 const Event = () => {
   return (
     <div
@@ -146,6 +147,8 @@ const Event = () => {
           </div>
         </div>
       </div>
+      {/* <Video /> */}
+      <InstagramReel />
       <p className="text-center text-2xl mt-8 font-extrabold">
         Freue dich auf eine Woche mit:
       </p>
