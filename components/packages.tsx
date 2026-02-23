@@ -57,7 +57,7 @@ const standardContent =
 function renderItems(
   content: string,
   isExtra: boolean,
-  isSpecial: boolean = false
+  isSpecial: boolean = false,
 ) {
   if (!content.length) {
     return null;
@@ -68,7 +68,7 @@ function renderItems(
         <CheckCircle2
           className={cn(
             "mr-5 shrink-0",
-            isSpecial ? "text-white" : "text-pink-500"
+            isSpecial ? "text-white" : "text-pink-500",
           )}
         />
       ) : (
@@ -401,28 +401,67 @@ const Packages = () => {
               Preisliste Tauchen
             </h3>
 
-            <div className="bg-white rounded-lg p-6 mb-6 shadow-sm">
-              <p className="text-center text-lg mb-4">
-                Die Preise für den Verleih von Tauchmaterial und Ausflügen
-                findest du demnächst hier:
-              </p>
+            <div className="bg-white rounded-lg p-6 mb-6 shadow-sm space-y-4 text-left text-sm md:text-base">
+              <div>
+                <p>
+                  Für alle Tauch-Interessierten bieten wir im Rahmen unseres
+                  Events{" "}
+                  <span className="font-semibold">
+                    Schnupper-Tauchen im Pool kostenfrei
+                  </span>{" "}
+                  an, um euch die Unterwasserwelt näher zu bringen.
+                </p>
+                <p className="mt-2 text-pink-500 font-semibold">
+                  Wer dabei &quot;Blut geleckt&quot; hat, kann das farbenfrohe
+                  Hausriff erkunden: Underwater Discovery Hausriff 80,00 €
+                </p>
+              </div>
 
-              <div className="flex items-center justify-center gap-4 bg-slate-400 text-white rounded-lg p-4 opacity-60 cursor-not-allowed">
-                <TbFileTypePdf size={40} />
-                <span className="font-semibold text-lg">
-                  Preisliste herunterladen (PDF)
-                </span>
+              <div className="border-t pt-4">
+                <p className="font-semibold mb-2">
+                  Für bereits zertifizierte Taucher können wir euch attraktive
+                  Pakete anbieten:
+                </p>
+                <ul className="list-disc list-outside ml-5 space-y-1">
+                  <li>
+                    <span className="font-semibold">Paket 1:</span> 5 Tauchgänge
+                    am wunderschönen Hausriff für nur 110,00 €
+                  </li>
+                  <li>
+                    <span className="font-semibold">Paket 2:</span> 3 Tage
+                    Bootsausfahrten mit je 2 Tauchgängen für nur 190,00 € an die
+                    schönsten Außen- und Innenriffe der SomaBay
+                  </li>
+                </ul>
+              </div>
+
+              <div className="border-t pt-4">
+                <p className="font-semibold mb-2">
+                  Auch für Aus- und Weiterbildungen haben wir attraktive
+                  Angebote:
+                </p>
+                <ul className="list-disc list-outside ml-5 space-y-1">
+                  <li>
+                    <span className="font-semibold">Specialties Bundle 2</span>{" "}
+                    für 42,00 € pro TG (plus Tauchgänge)
+                  </li>
+                  <li>
+                    <span className="font-semibold">Specialities Bundle 4</span>{" "}
+                    für 40,00 € pro TG (plus Tauchgänge)
+                  </li>
+                </ul>
+              </div>
+
+              <div className="border-t pt-4">
+                <p className="mb-2">
+                  Ohne Gerät mit einem Atemzug über das bunte Riffe gleiten?
+                  Probiert Apnoe / Freitauchen aus!
+                </p>
+                <p className="font-semibold text-pink-500">
+                  Freediving Kurs Basic bei uns für nur 100,00 €
+                </p>
               </div>
             </div>
-
-            {/* <div className="bg-pink-100 rounded-lg p-6 text-center">
-              <p className="text-xl">
-                Auf die gelisteten Preise bekommst du{" "}
-                <span className="font-bold text-3xl text-pink-600">
-                  15% Rabatt!
-                </span>
-              </p>
-            </div> */}
           </div>
         </div>
       </div>

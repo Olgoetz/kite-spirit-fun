@@ -16,7 +16,8 @@ const InstagramReel = () => {
         Get the Vibe
       </h2>
       <p className="text-center text-2xl mb-6 font-extrabold">
-        Ein paar Eindrücke vom letzten Jahr:
+        Das war unser Event letztes Jahr in Soma Bay, dieses Jahr wird noch
+        größer und Du bist dabei 🤗🫶🏼
       </p>
       <div className="flex justify-center w-full max-w-[400px]">
         {isMounted ? (
