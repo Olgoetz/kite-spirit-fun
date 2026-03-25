@@ -148,10 +148,12 @@ const Event = () => {
         </div>
       </div>
       {/* <Video /> */}
-      <InstagramReel />
-      <p className="text-center text-2xl mt-8 font-extrabold">
-        Freue dich auf eine Woche mit:
-      </p>
+      <div id="programm" className="py-4">
+        <InstagramReel />
+        <p className="text-center text-2xl mt-8 font-extrabold">
+          Freue dich auf eine Woche mit:
+        </p>
+      </div>
 
       <div className="grid mt-8 md:grid-cols-4 gap-6 items-center text-center mx-auto">
         <motion.div

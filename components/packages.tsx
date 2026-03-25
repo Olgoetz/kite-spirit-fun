@@ -161,12 +161,11 @@ const Packages = () => {
           </p>
         </div>
       </div>
-      <h2
-        id="pakete"
-        className="text-center font-bold text-2xl md:text-5xl text-pink-500 uppercase border-b pb-2  "
-      >
-        Preise
-      </h2>
+      <div id="pakete" className="md:pt-20 pt-10">
+        <h2 className="text-center font-bold text-2xl md:text-5xl text-pink-500 uppercase border-b pb-2 ">
+          Preise
+        </h2>
+      </div>
       <div className="grid md:grid-cols-3 gap-y-8 gap-x-10 mt-30">
         <Card className="flex flex-col h-full bg-gray-200 text-gray-500 opacity-60">
           <CardHeader className="relative">
