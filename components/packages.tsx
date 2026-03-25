@@ -168,37 +168,36 @@ const Packages = () => {
         Preise
       </h2>
       <div className="grid md:grid-cols-3 gap-y-8 gap-x-10 mt-30">
-        {/* EARLY BIRD */}
-        <Card className="flex flex-col h-full border-pink-500">
+        <Card className="flex flex-col h-full bg-gray-200 text-gray-500 opacity-60">
           <CardHeader className="relative">
-            <CardTitle className=" text-3xl">Early Bird</CardTitle>
-            <p className="absolute -top-3 -right-4 rotate-12 text-2xl bg-pink-500 m-2 p-1 rounded-lg font-extrabold text-center text-white">
-              10% Rabatt
+            <CardTitle className="text-3xl">Super Early Bird</CardTitle>
+            <p className="absolute border-gray-400 border -top-3 -right-4 rotate-12 text-2xl bg-gray-400 m-2 p-1 rounded-lg font-extrabold text-center text-white">
+              Abgelaufen
             </p>
-            <CardDescription>
-              bei Buchung zwischen 01.02. - 31.03.2026
+            <CardDescription className="text-gray-600">
+              bei Buchung bis 31.01.2026
             </CardDescription>
           </CardHeader>
           <CardContent className="grow">
             <ul>
-              {renderItems(standardContent, false)}
+              {renderItems(standardContent, false, true)}
               {renderItems("", true)}
               <li className="flex flex-col items-center gap-2 justify-center  text-center">
                 <PlusCircleIcon
                   size={40}
-                  className="shrink-0 text-white fill-pink-500"
+                  className="shrink-0 text-gray-400 fill-gray-300"
                 />
-                <span className="text-pink-500 text-2xl font-bold">
+                <span className="text-gray-600 text-2xl font-bold">
                   15% Rabatt
                 </span>{" "}
                 auf Beach Use, Storage, Kurse, Leihmaterial
               </li>
             </ul>
           </CardContent>
-          <CardFooter className="flex-col items-center justify-center bg-pink-500/70 text-white p-5 gap-4">
+          <CardFooter className="flex-col items-center justify-center bg-gray-300 text-gray-600 p-5 gap-4">
             <div className="flex">
               <p className="text-5xl font-semibold">
-                {prices.earlyBird.double}*
+                {prices.superEarlyBird.double}*
               </p>
             </div>
             <div className="text-center">
@@ -207,25 +206,35 @@ const Packages = () => {
               <p>zzgl. Kitematerial/-kurs</p>
             </div>
             <div className="my-4">
-              <Booking package_name={"Early Bird"} />
+              <div className="my-4">
+                <button
+                  disabled
+                  className="bg-gray-400 font-bold text-white px-4 py-2 rounded opacity-50 cursor-not-allowed"
+                >
+                  Nicht mehr verfügbar
+                </button>
+              </div>
             </div>
           </CardFooter>
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>Doppelzimmer zur Einzelnutzung {prices.earlyBird.single}</p>
+              <p>
+                Doppelzimmer zur Einzelnutzung {prices.superEarlyBird.single}
+              </p>
             </div>
           </div>
         </Card>
 
-        <Card className="flex flex-col h-full bg-pink-500 text-white  md:scale-110">
+        {/* EARLY BIRD */}
+        <Card className="flex flex-col h-full bg-pink-500 text-white md:scale-110">
           <CardHeader className="relative">
-            <CardTitle className="text-3xl">Super Early Bird</CardTitle>
-            <p className="absolute  border-pink-500 border -top-3 -right-4 rotate-12 text-2xl bg-white m-2 p-1 rounded-lg font-extrabold text-center text-pink-500">
-              20% Rabatt
+            <CardTitle className=" text-3xl">Early Bird</CardTitle>
+            <p className="absolute border-pink-500 border -top-3 -right-4 rotate-12 text-2xl bg-white m-2 p-1 rounded-lg font-extrabold text-center text-pink-500">
+              10% Rabatt
             </p>
             <CardDescription className="text-white">
-              bei Buchung bis 31.01.2026
+              bei Buchung zwischen 01.02. - 31.03.2026
             </CardDescription>
           </CardHeader>
           <CardContent className="grow">
@@ -247,7 +256,7 @@ const Packages = () => {
           <CardFooter className="flex-col items-center justify-center bg-white text-pink-500 p-5 gap-4">
             <div className="flex">
               <p className="text-5xl font-semibold">
-                {prices.superEarlyBird.double}*
+                {prices.earlyBird.double}*
               </p>
               <EuroIcon size={50} color="white" />
             </div>
@@ -257,20 +266,16 @@ const Packages = () => {
               <p>zzgl. Kitematerial/-kurs</p>
             </div>
             <div className="my-4">
-              <div className="my-4">
-                <Booking
-                  package_name={"Super Early Bird"}
-                  styles="bg-pink-500 font-bold text-white"
-                />
-              </div>
+              <Booking
+                package_name={"Early Bird"}
+                styles="bg-pink-500 font-bold text-white"
+              />
             </div>
           </CardFooter>
           <div className="flex p-5">
             <p className="mr-3">*</p>
             <div>
-              <p>
-                Doppelzimmer zur Einzelnutzung {prices.superEarlyBird.single}
-              </p>
+              <p>Doppelzimmer zur Einzelnutzung {prices.earlyBird.single}</p>
             </div>
           </div>
         </Card>
