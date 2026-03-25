@@ -447,7 +447,7 @@ const Packages = () => {
                 </p>
                 <ul className="list-disc list-outside ml-5 space-y-1">
                   <li>
-                    <span className="font-semibold">Specialties Bundle 2</span>{" "}
+                    <span className="font-semibold">Specialities Bundle 2</span>{" "}
                     für 42,00 € pro TG (plus Tauchgänge)
                   </li>
                   <li>
