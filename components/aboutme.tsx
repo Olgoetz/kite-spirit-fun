@@ -7,17 +7,17 @@ const Aboutme = () => {
   return (
     <div className="mt-20 px-4 bg-black text-white">
       <h2
-        id="ueberuns"
+        id="uebermich"
         className="py-20 text-center font-bold text-xl md:text-5xl uppercase border-b pb-2 text-pink-500"
       >
-        Über uns
+        Über mich
       </h2>
 
       <div className="container max-w-300 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 py-12 items-center justify-between">
         <div>
-          <h3 className={`${dancingScript.className} font-bold text-2xl`}>
+          {/* <h3 className={`${dancingScript.className} font-bold text-2xl`}>
             Michaela
-          </h3>
+          </h3> */}
           <p className="text-left text-pink-500">
             Motivation, Power, Temperament, Lebensfreude und ein strahlendes
             Lächeln…
@@ -59,7 +59,7 @@ const Aboutme = () => {
           />
         </div>
       </div>
-      <div className="container max-w-300 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 py-12 items-center justify-between">
+      {/* <div className="container max-w-300 mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 py-12 items-center justify-between">
         <div className="h-100 md:h-full relative">
           <Image
             fill
@@ -100,7 +100,7 @@ const Aboutme = () => {
             schaffen."
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

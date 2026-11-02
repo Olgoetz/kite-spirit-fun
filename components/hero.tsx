@@ -37,7 +37,7 @@ const Hero = () => {
                 fontWeight: 2000,
               }}
             >
-              10.05. - 16.05.2026
+              09.05. - 15.05.2027
             </p>
             <Button className="text-xl md:text-3xl bg-pink-500  p-10 h-20">
               <Link href="#pakete" className="cursor-pointer">

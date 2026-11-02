@@ -1,14 +1,14 @@
 export const prices = {
   regular: {
-    single: "1.136,00 €",
-    double: "1.016,00 €",
+    single: "714,00 €",
+    double: "594,00 €",
   },
   earlyBird: {
-    single: "1.067,60 €",
-    double: "959,60 €",
+    single: "642,60 €",
+    double: "534,60 €",
   },
   superEarlyBird: {
-    single: "999,20 €",
-    double: "903,20 €",
+    single: "571,20 €",
+    double: "475,20 €",
   },
 };
