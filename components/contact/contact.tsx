@@ -65,7 +65,7 @@ export default function Contact() {
     <div className="bg-white px-4">
       <div id="kontakt" className="md:p-10 max-w-300 mx-auto">
         <h2 className="text-xl md:text-5xl  uppercase text-pink-500 text-center font-bold my-10 border-b pb-2">
-          So erreichst Du uns
+          So erreichst Du mich
         </h2>
 
         <div className="container grid md:grid-cols-2 w-full h-full gap-4 ">

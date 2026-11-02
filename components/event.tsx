@@ -1,12 +1,11 @@
 "use client";
-import React from "react";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import michi_und_katja from "@/public/michi_und_katja2.jpeg";
+import michi from "@/public/michi.webp";
 import { Waves, Heart, Sun, ScanHeart, WavesLadder } from "lucide-react";
-import { TbYoga } from "react-icons/tb";
-import { IoBody } from "react-icons/io5";
+
 import { dancingScript } from "@/lib/fonts";
 import { prices } from "@/lib/prices";
 import InstagramReel from "./instagramReel";
@@ -34,7 +33,7 @@ const Event = () => {
 
         <div className="bg-linear-to-br from-pink-50 to-blue-50 rounded-lg p-6 md:p-8">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-pink-500 mb-4">
-            Move-Spirt-Fun Soma Bay 2026 - Ocean Edition
+            Move-Spirt-Fun Soma Bay 2027 - Ocean Edition
           </h2>
           <p className="text-center text-lg font-semibold mb-6">
             Action, Lifestyle & Community am Roten Meer!
@@ -47,9 +46,9 @@ const Event = () => {
             etwas dabei!
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
             <div>
-              <div className="grid grid-cols-1 gap-6 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-white rounded-lg p-5 shadow-sm">
                   <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
                     <Waves className="text-pink-500" size={24} />{" "}
@@ -94,55 +93,63 @@ const Event = () => {
                 </div>
               </div>
 
-              <div className="bg-pink-100 rounded-lg p-5 mb-6">
-                <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                  <Heart className="text-pink-500 fill-pink-500" size={24} />{" "}
-                  Alle willkommen:
-                </h3>
-                <p className="text-gray-700">
-                  Paare, Alleinreisende, Freunde, Anfänger, Fortgeschrittene –
-                  hier zählt nur gute Laune, offene Herzen und die Lust auf eine
-                  fantastische Zeit.
-                </p>
-              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-center">
+                <div>
+                  <div className="bg-pink-100 rounded-lg p-5 mb-6">
+                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
+                      <Heart
+                        className="text-pink-500 fill-pink-500"
+                        size={24}
+                      />{" "}
+                      Alle willkommen:
+                    </h3>
+                    <p className="text-gray-700">
+                      Paare, Alleinreisende, Freunde, Anfänger, Fortgeschrittene
+                      – hier zählt nur gute Laune, offene Herzen und die Lust
+                      auf eine fantastische Zeit.
+                    </p>
+                  </div>
 
-              <div className="border-t-2 border-pink-300 pt-6">
-                <h3 className="text-xl font-bold text-center mb-4">
-                  Das darfst du nicht verpassen – wirklich nicht!
-                </h3>
-                <p className="text-center mb-4">
-                  Dieses Event steckt voller Energie, Leichtigkeit, Spaß und
-                  Gänsehaut-Momenten.
-                </p>
-                <p className="text-center mb-4">
-                  Hier entstehen Freundschaften, die bleiben – Erinnerungen, die
-                  tragen – und Momente, von denen du noch wochenlang strahlst.
-                </p>
-                <p className="text-center font-semibold text-lg">
-                  Gemeinsam wachsen. Gemeinsam lachen. Gemeinsam genießen.
-                </p>
-                <p className="text-center text-pink-600 font-bold text-xl mt-4">
-                  Dein unvergessliches Erlebnis in Soma Bay wartet auf dich!
-                </p>
-                <p className="text-center font-bold text-xl mt-4">
-                  Wir freuen uns auf dich!
-                </p>
-                <p
-                  className={`${dancingScript.className} text-4xl text-center mt-4`}
-                >
-                  Michi & Katja
-                </p>
-              </div>
-            </div>
+                  <div className="border-t-2 border-pink-300 pt-6">
+                    <h3 className="text-xl font-bold text-center mb-4">
+                      Das darfst du nicht verpassen – wirklich nicht!
+                    </h3>
+                    <p className="text-center mb-4">
+                      Dieses Event steckt voller Energie, Leichtigkeit, Spaß und
+                      Gänsehaut-Momenten.
+                    </p>
+                    <p className="text-center mb-4">
+                      Hier entstehen Freundschaften, die bleiben – Erinnerungen,
+                      die tragen – und Momente, von denen du noch wochenlang
+                      strahlst.
+                    </p>
+                    <p className="text-center font-semibold text-lg">
+                      Gemeinsam wachsen. Gemeinsam lachen. Gemeinsam genießen.
+                    </p>
+                    <p className="text-center text-pink-600 font-bold text-xl mt-4">
+                      Dein unvergessliches Erlebnis in Soma Bay wartet auf dich!
+                    </p>
+                    <p className="text-center font-bold text-xl mt-4">
+                      Ich freue mich auf dich!
+                    </p>
+                    <p
+                      className={`${dancingScript.className} text-4xl text-center mt-4`}
+                    >
+                      Deine Michi
+                    </p>
+                  </div>
+                </div>
 
-            <div>
-              <Image
-                src={michi_und_katja}
-                alt="Michaela und Katja"
-                loading="lazy"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="rounded-lg h-full w-full object-cover"
-              />
+                <div className="flex items-center justify-center">
+                  <Image
+                    src={michi}
+                    alt="Michaela Süßbauer"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="rounded-lg w-full max-w-xs h-auto object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -235,7 +242,7 @@ const Event = () => {
             <h3 className="text-4xl text-pink-500 font-extrabold mb-3">
               Zeitraum
             </h3>
-            <p className="text-2xl">10.05. - 16.05.2026</p>
+            <p className="text-2xl">09.05. - 15.05.2027</p>
           </div>
           <div className="">
             <h3 className="text-4xl text-pink-500 font-extrabold mb-3">

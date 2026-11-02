@@ -10,8 +10,8 @@ export function StructuredData() {
       `${process.env.URL}/hero.jpeg`,
       `${process.env.URL}/michi_und_katja.jpeg`,
     ],
-    startDate: "2026-05-01",
-    endDate: "2026-05-08",
+    startDate: "2027-05-09",
+    endDate: "2027-05-15",
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location: {

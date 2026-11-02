@@ -15,14 +15,14 @@ export const sendBookingInquiry = async (formData: FormData) => {
   }
 
   const input = parsedData.data;
-  const cc = process.env.RESEND_TO_EMAIL_EVENT?.split(",") || [];
+
   try {
     await resend.emails.send({
       from: `M. Suessbauer <${senderEmail}>`,
       to: [process.env.RESEND_TO_EMAIL_BOOKING as string],
-      cc: cc,
-      replyTo: cc[0],
-      subject: "Move-Spirit-Fun 2026 Ocean Edition: Neue Buchungsanfrage",
+      cc: process.env.RESEND_TO_EMAIL_EVENT!,
+      replyTo: process.env.RESEND_TO_EMAIL_EVENT!,
+      subject: "Move-Spirit-Fun 2027 Ocean Edition: Neue Buchungsanfrage",
       react: await BookingEmailTemplate({
         name: input.name,
         email: input.email,

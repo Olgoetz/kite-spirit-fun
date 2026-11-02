@@ -24,8 +24,8 @@ const links = [
     link: "#pakete",
   },
   {
-    label: "Über Uns",
-    link: "#ueberuns",
+    label: "Über mich",
+    link: "#uebermich",
   },
   {
     label: "Kontakt",
@@ -57,7 +57,7 @@ const Navbar = () => {
       <div
         className={cn(
           "hidden xl:bg-black md:flex z-[1000] fixed top-0 px-8 left-0 transition ease-in-out delay-150 w-full h-[70px]  items-center justify-between",
-          navcolor
+          navcolor,
         )}
       >
         <Link href="/">
