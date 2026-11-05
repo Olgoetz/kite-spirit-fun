@@ -22,6 +22,8 @@ import { TbFileTypePdf } from "react-icons/tb";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { prices } from "@/lib/prices";
+import Countdown from "./countdown";
+import { spotsLeft } from "@/lib/event";
 const standardContent =
   "Welcome Cocktail, Sunrise & Sunset Yoga, professionelle Betreuung durch erfahrene Trainer, abwechslungsreiches Fitnessprogramm, Bedouin Dinner am Strand, Sunset Boot Tour, kostenloser Shuttleservice zum Kitespot und zurück, kostenloser Shuttleservice zur Marina, kostenlose Daybeds und Liegen am Strand, Tauschule direkt am Hotel, 6 Nächte, Halbpension, unbegrenzt Trinkwasser";
 // const content = [
@@ -160,17 +162,26 @@ const Packages = () => {
           </p>
         </div>
       </div>
-      <div id="pakete" className="md:pt-20 pt-10">
-        <h2 className="text-center font-bold text-2xl md:text-5xl text-pink-500 uppercase border-b pb-2 ">
+      <div id="pakete" className="scroll-mt-20 md:pt-20 pt-10">
+        <h2 className="text-center font-bold text-3xl md:text-5xl text-pink-500 uppercase border-b pb-2 ">
           Preise
         </h2>
+        <div className="mt-6 flex flex-col items-center gap-3">
+          <p className="text-center text-lg">
+            <span className="font-bold text-pink-500">
+              nur noch {spotsLeft} Plätze
+            </span>{" "}
+            – Frühbucher-Rabatt endet in:
+          </p>
+          <Countdown />
+        </div>
       </div>
       <div className="grid md:grid-cols-3 gap-y-8 gap-x-10 mt-30">
         <Card className="flex flex-col h-full bg-pink-500 text-white md:scale-110">
           <CardHeader className="relative">
             <CardTitle className="text-3xl">Super Early Bird</CardTitle>
             <p className="absolute border-pink-500 border -top-3 -right-4 rotate-12 text-sm bg-white m-2 p-1 rounded-lg font-extrabold text-center text-pink-500 max-w-[160px] leading-tight">
-              20% Rabatt sichern
+              nur noch wenige Plätze
             </p>
             <CardDescription className="text-white">
               bei Buchung bis 31.01.2027
@@ -193,11 +204,18 @@ const Packages = () => {
             </ul>
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-white text-pink-500 p-5 gap-4">
-            <div className="flex">
+            <div className="flex flex-col items-center">
               <p className="text-5xl font-semibold">
                 {prices.superEarlyBird.double}*
               </p>
+              <p className="text-sm text-pink-500/80">
+                entspricht {prices.superEarlyBird.perNight} / Nacht p. P.
+              </p>
             </div>
+            <p className="rounded-full bg-pink-500 px-3 py-1 text-sm font-bold text-white">
+              Du sparst {prices.superEarlyBird.discount} (
+              {prices.superEarlyBird.savingsDouble})
+            </p>
             <div className="text-center">
               <p>im Doppelzimmer</p>
               <p>zzgl. eigene Anreise</p>
@@ -243,8 +261,11 @@ const Packages = () => {
             </ul>
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-pink-500/70 text-white p-5 gap-4">
-            <div className="flex">
+            <div className="flex flex-col items-center">
               <p className="text-5xl font-semibold">{prices.regular.double}*</p>
+              <p className="text-sm text-white/80">
+                entspricht {prices.regular.perNight} / Nacht p. P.
+              </p>
             </div>
             <div className="text-center">
               <p>im Doppelzimmer</p>
@@ -291,11 +312,18 @@ const Packages = () => {
             </ul>
           </CardContent>
           <CardFooter className="flex-col items-center justify-center bg-pink-500/70 text-white p-5 gap-4">
-            <div className="flex">
+            <div className="flex flex-col items-center">
               <p className="text-5xl font-semibold">
                 {prices.earlyBird.double}*
               </p>
+              <p className="text-sm text-white/80">
+                entspricht {prices.earlyBird.perNight} / Nacht p. P.
+              </p>
             </div>
+            <p className="rounded-full bg-white px-3 py-1 text-sm font-bold text-pink-500">
+              Du sparst {prices.earlyBird.discount} (
+              {prices.earlyBird.savingsDouble})
+            </p>
             <div className="text-center">
               <p>im Doppelzimmer</p>
               <p>zzgl. eigene Anreise</p>
@@ -401,7 +429,7 @@ const Packages = () => {
             <div className="bg-white rounded-lg p-6 mb-6 shadow-sm space-y-4 text-left text-sm md:text-base">
               <div>
                 <p>
-                  Für alle Tauch-Interessierten bieten wir im Rahmen unseres
+                  Für alle Tauch-Interessierten biete ich im Rahmen unseres
                   Events{" "}
                   <span className="font-semibold">
                     Schnupper-Tauchen im Pool kostenfrei
@@ -416,7 +444,7 @@ const Packages = () => {
 
               <div className="border-t pt-4">
                 <p className="font-semibold mb-2">
-                  Für bereits zertifizierte Taucher können wir euch attraktive
+                  Für bereits zertifizierte Taucher kann ich euch attraktive
                   Pakete anbieten:
                 </p>
                 <ul className="list-disc list-outside ml-5 space-y-1">
@@ -434,7 +462,7 @@ const Packages = () => {
 
               <div className="border-t pt-4">
                 <p className="font-semibold mb-2">
-                  Auch für Aus- und Weiterbildungen haben wir attraktive
+                  Auch für Aus- und Weiterbildungen habe ich attraktive
                   Angebote:
                 </p>
                 <ul className="list-disc list-outside ml-5 space-y-1">

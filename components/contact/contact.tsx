@@ -63,8 +63,8 @@ export default function Contact() {
 
   return (
     <div className="bg-white px-4">
-      <div id="kontakt" className="md:p-10 max-w-300 mx-auto">
-        <h2 className="text-xl md:text-5xl  uppercase text-pink-500 text-center font-bold my-10 border-b pb-2">
+      <div id="kontakt" className="scroll-mt-20 md:p-10 max-w-300 mx-auto">
+        <h2 className="text-3xl md:text-5xl  uppercase text-pink-500 text-center font-bold my-10 border-b pb-2">
           So erreichst Du mich
         </h2>
 

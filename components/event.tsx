@@ -15,12 +15,12 @@ const Event = () => {
       className="container px-4 max-w-350 mx-auto "
       //   style={{ ...springs }}
     >
-      <h1
+      <h2
         id="event"
-        className="text-center font-bold text-2xl md:text-5xl pt-20  uppercase border-b pb-2  text-pink-500"
+        className="scroll-mt-20 pt-20 text-center font-bold text-3xl md:text-5xl uppercase border-b pb-2 text-pink-500"
       >
         Event
-      </h1>
+      </h2>
 
       <div className="mt-8  space-y-6">
         {/* <p className="text-center text-lg">
@@ -193,6 +193,7 @@ const Event = () => {
               fill
               loading="lazy"
               className="object-cover object-left -z-10 rounded-lg"
+              sizes="(max-width: 768px) 100vw, 25vw"
             />
             <p className="text-white uppercase text-2xl bg-slate-400/60 w-60 p-8">
               Fitness & Yoga
@@ -210,6 +211,7 @@ const Event = () => {
               fill
               loading="lazy"
               className="object-cover -z-10 rounded-lg"
+              sizes="(max-width: 768px) 100vw, 25vw"
             />
             <p className="text-white uppercase text-2xl bg-slate-400/50 w-60 p-8">
               Spirit & <br />
@@ -224,10 +226,11 @@ const Event = () => {
           <div className="flex relative h-100 items-center justify-center">
             <Image
               src="/diving.jpeg"
-              alt="Spaß SomaBay Ägypten"
+              alt="Tauchen SomaBay Ägypten"
               fill
               loading="lazy"
               className="object-cover -z-10 rounded-lg"
+              sizes="(max-width: 768px) 100vw, 25vw"
             />
             <p className="text-white uppercase text-2xl bg-slate-400/50 w-60 p-8">
               Scuba & Schnorcheln
@@ -261,7 +264,10 @@ const Event = () => {
         </div>
         <div className="md:col-span-2 w-full h-full ">
           <div className="bg-white  rounded-lg relative h-50 md:h-full ">
-            <Link href="https://kitehouse-somabay.com/">
+            <Link
+              href="https://kitehouse-somabay.com/"
+              className="block relative h-full w-full"
+            >
               <Image
                 src="https://kitehouse-somabay.com/UP1/wp-content/uploads/A-dream-come-true.jpg"
                 alt="Kitehouse Soma Bay"

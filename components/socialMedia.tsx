@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram, Linkedin, Facebook } from "lucide-react";
+import { FaInstagram, FaFacebook } from "react-icons/fa6";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -15,13 +15,13 @@ const SocialMedia = ({ classes }: Styles) => {
           href="https://www.instagram.com/michaela_suessbauer//?hl=de"
           target="_blank"
         >
-          <Instagram />
+          <FaInstagram size={24} />
         </Link>
         <Link
-          href="hhttps://www.facebook.com/michaelasuessbauer1.de"
+          href="https://www.facebook.com/michaelasuessbauer1.de"
           target="_blank"
         >
-          <Facebook />
+          <FaFacebook size={24} />
         </Link>
       </div>
     </>

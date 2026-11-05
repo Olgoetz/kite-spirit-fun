@@ -24,6 +24,10 @@ const links = [
     link: "#pakete",
   },
   {
+    label: "FAQ",
+    link: "#faq",
+  },
+  {
     label: "Über mich",
     link: "#uebermich",
   },
@@ -36,14 +40,16 @@ const links = [
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
 
-  const [navcolor, setNavcolor] = useState("");
+  const [navcolor, setNavcolor] = useState(
+    "bg-gradient-to-b from-black/70 to-transparent",
+  );
 
   useEffect(() => {
     const handleNavcolor = () => {
       if (window.scrollY >= 10) {
         setNavcolor("bg-black");
       } else {
-        setNavcolor("bg-transparent");
+        setNavcolor("bg-gradient-to-b from-black/70 to-transparent");
       }
     };
     window.addEventListener("scroll", handleNavcolor);
@@ -56,16 +62,17 @@ const Navbar = () => {
     <div className="w-full text-white">
       <div
         className={cn(
-          "hidden xl:bg-black md:flex z-[1000] fixed top-0 px-8 left-0 transition ease-in-out delay-150 w-full h-[70px]  items-center justify-between",
+          "hidden md:flex z-[1000] fixed top-0 px-8 left-0 transition ease-in-out delay-150 w-full h-[70px]  items-center justify-between",
           navcolor,
         )}
       >
         <Link href="/">
           <Image
             width={40}
-            height={1}
+            height={40}
             src="/logo_michi.png"
             alt="Michaela Süßbauer"
+            className="h-auto w-auto"
           />
         </Link>
         <div className="hidden md:flex">
@@ -109,10 +116,10 @@ const Navbar = () => {
             <Link href="/">
               <Image
                 width={40}
-                height={1}
+                height={40}
                 src="/logo_michi.png"
                 alt="Michaela Süßbauer"
-                className="z-[500]"
+                className="z-[500] h-auto w-auto"
               />
             </Link>
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 import SocialMedia from "./socialMedia";
 import Link from "next/link";
 import Image from "next/image";
-import { Clock, CopyrightIcon, Mail, MapPin, Phone } from "lucide-react";
+import { CopyrightIcon, Mail, MapPin, Phone } from "lucide-react";
 
 const currentYear = () => {
   let today: Date = new Date();
@@ -35,6 +35,14 @@ export const Footer = () => {
                 events@michaela-suessbauer.de
               </a>
             </li>
+            <li className="flex items-center justify-center">
+              <Phone size={24} className="mr-5" />
+              <a href="tel:+4915140440312">+49 (0) 151 40440312</a>
+            </li>
+            <li className="flex items-center justify-center text-center">
+              <MapPin size={24} className="mr-5 shrink-0" />
+              <span>Michaela Süßbauer, Deutschland</span>
+            </li>
             <li>
               <div className="grid md:grid-cols-1 gap-3 items-center justify-center">
                 <div className="mx-auto">
@@ -45,6 +53,7 @@ export const Footer = () => {
                       width={50}
                       height={100}
                       loading="lazy"
+                      className="h-auto w-auto"
                     />
                   </Link>
                 </div>

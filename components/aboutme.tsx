@@ -8,7 +8,7 @@ const Aboutme = () => {
     <div className="mt-20 px-4 bg-black text-white">
       <h2
         id="uebermich"
-        className="py-20 text-center font-bold text-xl md:text-5xl uppercase border-b pb-2 text-pink-500"
+        className="scroll-mt-20 py-20 text-center font-bold text-3xl md:text-5xl uppercase border-b pb-2 text-pink-500"
       >
         Über mich
       </h2>

@@ -7,20 +7,31 @@ import Hero from "@/components/hero";
 import Packages from "@/components/packages";
 
 import Speparator from "@/components/separator";
+import Inclusions from "@/components/inclusions";
+import Schedule from "@/components/schedule";
+import Testimonials from "@/components/testimonials";
+import Partners from "@/components/partners";
+import Faq from "@/components/faq";
+import StickyCta from "@/components/stickyCta";
 
 export default function Home() {
   return (
     <main>
-      {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex"></div> */}
       <Hero />
       <Event />
 
-      {/* <Program /> */}
       <Speparator imageSrc="/background.JPG" alt="SomaBay Ägypten" />
 
+      <Inclusions />
+      <Schedule />
       <Packages />
+      <Testimonials />
+      <Partners />
       <Aboutme />
+      <Faq />
       <Contact />
+
+      <StickyCta />
     </main>
   );
 }
